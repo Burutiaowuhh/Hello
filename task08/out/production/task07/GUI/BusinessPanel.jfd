@@ -1,0 +1,109 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "insets 0,hidemode 3"
+			"$columnConstraints": "[fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill]"
+			"$rowConstraints": "[fill][][][][][][][][][][][][][][][][]"
+		} ) {
+			name: "this"
+			"title": "BAM Client"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "账户："
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 5 2 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "userid"
+				"text": "text"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 7 5 4 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "姓名："
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 6"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "username"
+				"text": "text"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 7 6 4 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "余额："
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 7"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "balance"
+				"text": "text"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 7 7 4 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "信用额度："
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 8"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "over"
+				"text": "text"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 7 8 4 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "贷款额："
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 9"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "loanmoney"
+				"text": "text"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 7 9 4 1"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "type"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "存款"
+					addElement( "存款" )
+					addElement( "取款" )
+					addElement( "贷款" )
+					addElement( "还贷" )
+				}
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 10"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "getmoney"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 7 10 4 1"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "submit"
+				"text": "提交"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "submitActionPerformed", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 11"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "返回"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2ActionPerformed", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 7 11"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 0 )
+			"size": new java.awt.Dimension( 445, 290 )
+		} )
+	}
+}
