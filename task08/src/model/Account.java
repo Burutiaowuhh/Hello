@@ -2,8 +2,13 @@ package model;
 
 import java.io.Serializable;
 
+<<<<<<< HEAD
 public abstract class Account implements Serializable {
     static long pid = 100000;
+=======
+public abstract class Account implements Serializable{
+    static long pid=100000;
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
     private long id;
     private String password;
     private String name;
@@ -14,8 +19,14 @@ public abstract class Account implements Serializable {
     private double loanMoney;
 
 
+<<<<<<< HEAD
     public Account(String password, String name, String personId, String email, double balance, boolean accountType) {
         id = ++pid;     //静态，让id每次加1
+=======
+
+    public Account(String password, String name, String personId, String email, double balance, boolean accountType) {
+        id=++pid;     //静态，让id每次加1
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         this.password = password;
         this.name = name;
         this.personId = personId;
@@ -34,7 +45,11 @@ public abstract class Account implements Serializable {
     }
 
     public Account() {
+<<<<<<< HEAD
         id = ++pid;
+=======
+        id=++pid;
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
     }
 
 
@@ -117,8 +132,13 @@ public abstract class Account implements Serializable {
         this.loanMoney = loanMoney;
     }
 
+<<<<<<< HEAD
     public final void deposit(double m) {
         this.balance = balance + m;
+=======
+    public final void deposit(double m){
+        this.balance=balance+m;
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
     }
 
     public abstract void withdraw(double m);

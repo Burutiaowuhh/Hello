@@ -72,6 +72,7 @@ public class RegisterPanel extends JFrame {
         //======== panel1 ========
         {
             panel1.setLayout(new MigLayout(
+<<<<<<< HEAD
                     "insets 0,hidemode 3",
                     // columns
                     "[fill]",
@@ -80,6 +81,16 @@ public class RegisterPanel extends JFrame {
                             "[]" +
                             "[]" +
                             "[]"));
+=======
+                "insets 0,hidemode 3",
+                // columns
+                "[fill]",
+                // rows
+                "[fill]" +
+                "[]" +
+                "[]" +
+                "[]"));
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         }
         contentPane.add(panel1);
         panel1.setBounds(new Rectangle(new Point(215, 115), panel1.getPreferredSize()));
@@ -115,9 +126,15 @@ public class RegisterPanel extends JFrame {
         label7.setBounds(125, 210, 60, 17);
 
         //---- accounttype ----
+<<<<<<< HEAD
         accounttype.setModel(new DefaultComboBoxModel<>(new String[]{
                 "\u50a8\u84c4\u8d26\u6237",
                 "\u4fe1\u7528\u8d26\u6237"
+=======
+        accounttype.setModel(new DefaultComboBoxModel<>(new String[] {
+            "\u50a8\u84c4\u8d26\u6237",
+            "\u4fe1\u7528\u8d26\u6237"
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         }));
         contentPane.add(accounttype);
         accounttype.setBounds(240, 30, 125, accounttype.getPreferredSize().height);
@@ -134,6 +151,7 @@ public class RegisterPanel extends JFrame {
 
         //---- submit ----
         submit.setText("\u63d0\u4ea4");
+<<<<<<< HEAD
         submit.addActionListener(e -> {
             try {
                 submitActionPerformed(e);
@@ -141,6 +159,9 @@ public class RegisterPanel extends JFrame {
                 e1.printStackTrace();
             }
         });
+=======
+        submit.addActionListener(e -> submitActionPerformed(e));
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         contentPane.add(submit);
         submit.setBounds(140, 255, 75, submit.getPreferredSize().height);
 
@@ -161,6 +182,7 @@ public class RegisterPanel extends JFrame {
         // TODO add your code here
 //        String password,String name,String personId,String email,boolean accounttpye
         boolean act;
+<<<<<<< HEAD
         String acty = accounttype.getSelectedItem().toString();
         if (acty.equals("储蓄账户")) {
             act = false;
@@ -180,6 +202,27 @@ public class RegisterPanel extends JFrame {
             Bank bank = Bank.getBank();
             bank.register(password, name, perId, emailid, act);
             LoginPanel loginPanel = new LoginPanel();
+=======
+        String acty=accounttype.getSelectedItem().toString();
+        if(acty.equals("储蓄账户")){
+            act=false;
+        }else{
+            act=true;
+        }
+        String name=username.getText().toString();
+        String password= String.valueOf(userpassword.getPassword());
+        System.out.println(password);
+        String password2=passwordagain.getPassword().toString();
+        String perId=personId.getText().toString();
+        String emailid=email.getText().toString();
+        if(password.equals(password2)){
+            System.out.println(password+"    "+password2);
+            System.out.println("两次密码输入不一致，请重新输入!");
+        }else{
+            Bank bank=Bank.getBank();
+            bank.register(password,name,perId,emailid,act);
+            LoginPanel loginPanel=new LoginPanel();
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
             loginPanel.setVisible(true);
             this.dispose();
         }

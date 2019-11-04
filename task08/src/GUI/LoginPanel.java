@@ -15,7 +15,11 @@ import java.awt.event.ActionEvent;
 /**
  * @author Brainrain
  */
+<<<<<<< HEAD
 public class LoginPanel extends JFrame {
+=======
+public class LoginPanel extends JFrame{
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JLabel label1;
@@ -37,7 +41,12 @@ public class LoginPanel extends JFrame {
     }
 
 
+<<<<<<< HEAD
     private void initComponents() throws ATMException {
+=======
+
+    private void initComponents() throws ATMException{
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
         label2 = new JLabel();
@@ -90,6 +99,7 @@ public class LoginPanel extends JFrame {
     }
 
 
+<<<<<<< HEAD
     private void button1ActionPerformed(ActionEvent e) throws ATMException {
         // TODO add your code here
 
@@ -104,6 +114,23 @@ public class LoginPanel extends JFrame {
             BusinessPanel businessPanel = new BusinessPanel();
             businessPanel.setAccount(bank.login(userid, password));
             businessPanel.show1(bank.login(userid, password));
+=======
+
+    private void button1ActionPerformed(ActionEvent e) throws ATMException{
+        // TODO add your code here
+
+        long userid= Long.parseLong(userId.getText());
+        String password= String.valueOf(userpassword.getPassword());
+        System.out.println(password);
+        Bank bank=Bank.getBank();
+        if(bank.login(userid,password)==null){
+            throw new LoginException("用户名或密码错误");
+        }else {
+
+            BusinessPanel businessPanel=new BusinessPanel();
+            businessPanel.setAccount(bank.login(userid,password));
+            businessPanel.show1(bank.login(userid,password));
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
             businessPanel.setVisible(true);
             this.dispose();
         }

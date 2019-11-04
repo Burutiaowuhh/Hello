@@ -7,6 +7,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="library" name="lib (2)" level="project" />
+=======
+    <orderEntry type="library" name="MigLayout" level="project" />
+    <orderEntry type="library" name="IntelliJ IDEA GridLayout" level="project" />
+    <orderEntry type="library" name="JGoodies Forms" level="project" />
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
   </component>
 </module>

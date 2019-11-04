@@ -14,7 +14,11 @@ public class SavingAccount extends Account {
 
     @Override
     public void withdraw(double m) {
+<<<<<<< HEAD
         setBalance(getBalance() - m);
+=======
+         setBalance(getBalance()-m);
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
     }
 
 }

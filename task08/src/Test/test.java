@@ -19,8 +19,13 @@ public class test {
 
 
         Account account0 = new CreditAccount("456", "shan", "321201", "poi", 5000, true);
+<<<<<<< HEAD
         Account account1 = new SavingAccount("43456", "mao", "321101", "poi", 30, false);
         Account account2 = new CreditAccount("43456", "shi", "321201", "poi", 30, true);
+=======
+        Account account1= new SavingAccount("43456", "mao", "321101", "poi", 30, false) ;
+        Account account2= new CreditAccount("43456", "shi", "321201", "poi", 30, true) ;
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
 
 
 //        BankPre bank1 = BankPre.getBank();  //Bank单例模式
@@ -70,8 +75,13 @@ public class test {
 //        System.out.println(accounts[1]);
 //        System.out.println(accounts[2]);
 
+<<<<<<< HEAD
         Bank bank = Bank.getBank();
         List list = bank.getList();
+=======
+        Bank bank=Bank.getBank();
+        List list=bank.getList();
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         list.add(account0);
         list.add(account1);
         list.add(account2);
@@ -99,7 +109,11 @@ public class test {
 //        RegisterPanel re=new RegisterPanel();
 //        re.setVisible(true);
 
+<<<<<<< HEAD
         FileMake fileMake = new FileMake();
+=======
+        FileMake fileMake=new FileMake();
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         fileMake.Iohandle(list);
 //        fileMake.Ioreadhandle();
     }

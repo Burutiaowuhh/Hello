@@ -10,6 +10,10 @@ import java.awt.event.ActionEvent;
  */
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
 /**
  * @author unknown
  */
@@ -20,14 +24,22 @@ public class MainPanel extends JFrame {
 
     private void registerActionPerformed(ActionEvent e) {
         // TODO add your code here
+<<<<<<< HEAD
         RegisterPanel registerPanel = new RegisterPanel();
+=======
+        RegisterPanel registerPanel=new RegisterPanel();
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         registerPanel.setVisible(true);
 
     }
 
     private void loginActionPerformed(ActionEvent e) throws ATMException {
         // TODO add your code here
+<<<<<<< HEAD
         LoginPanel loginPanel = new LoginPanel();
+=======
+        LoginPanel loginPanel=new LoginPanel();
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         loginPanel.setVisible(true);
     }
 
@@ -56,8 +68,13 @@ public class MainPanel extends JFrame {
             //---- register ----
             register.setText("\u6ce8\u518c");
             register.addActionListener(e -> {
+<<<<<<< HEAD
                 registerActionPerformed(e);
             });
+=======
+			registerActionPerformed(e);
+		});
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
             panel1.add(register);
             register.setBounds(125, 210, 90, 63);
 
@@ -75,7 +92,11 @@ public class MainPanel extends JFrame {
 
             { // compute preferred size
                 Dimension preferredSize = new Dimension();
+<<<<<<< HEAD
                 for (int i = 0; i < panel1.getComponentCount(); i++) {
+=======
+                for(int i = 0; i < panel1.getComponentCount(); i++) {
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
                     Rectangle bounds = panel1.getComponent(i).getBounds();
                     preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                     preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
@@ -92,7 +113,11 @@ public class MainPanel extends JFrame {
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
+<<<<<<< HEAD
             for (int i = 0; i < contentPane.getComponentCount(); i++) {
+=======
+            for(int i = 0; i < contentPane.getComponentCount(); i++) {
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
                 Rectangle bounds = contentPane.getComponent(i).getBounds();
                 preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                 preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);

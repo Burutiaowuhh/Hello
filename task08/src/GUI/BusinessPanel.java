@@ -20,7 +20,10 @@ public class BusinessPanel extends JFrame {
     public BusinessPanel() {
         initComponents();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JLabel label1;
     private JLabel userid;
@@ -50,6 +53,7 @@ public class BusinessPanel extends JFrame {
 
     private void submitActionPerformed(ActionEvent e) throws ATMException {
         // TODO add your code here
+<<<<<<< HEAD
         Bank bank = Bank.getBank();
         double money = Double.parseDouble(getmoney.getText());
         String Strtype = type.getSelectedItem().toString();
@@ -67,6 +71,25 @@ public class BusinessPanel extends JFrame {
                 show1(bank.payloan(account.getId(), money));
                 break;
             default:
+=======
+        Bank bank=Bank.getBank();
+        double money= Double.parseDouble(getmoney.getText());
+        String Strtype=type.getSelectedItem().toString();
+        switch (Strtype){
+            case "存款":
+                show1(bank.deposit(account.getId(),money));
+                break;
+            case "取款":
+                show1(bank.withdraw(account.getId(),money));
+                break;
+            case "贷款":
+                show1(bank.loanMoney(account.getId(),money));
+                break;
+            case "还贷":
+                show1(bank.payloan(account.getId(),money));
+                break;
+                default:
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         }
     }
 
@@ -150,11 +173,19 @@ public class BusinessPanel extends JFrame {
         loanmoney.setBounds(229, 131, 135, loanmoney.getPreferredSize().height);
 
         //---- type ----
+<<<<<<< HEAD
         type.setModel(new DefaultComboBoxModel<>(new String[]{
                 "\u5b58\u6b3e",
                 "\u53d6\u6b3e",
                 "\u8d37\u6b3e",
                 "\u8fd8\u8d37"
+=======
+        type.setModel(new DefaultComboBoxModel<>(new String[] {
+            "\u5b58\u6b3e",
+            "\u53d6\u6b3e",
+            "\u8d37\u6b3e",
+            "\u8fd8\u8d37"
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
         }));
         contentPane.add(type);
         type.setBounds(108, 155, 60, type.getPreferredSize().height);
@@ -186,18 +217,30 @@ public class BusinessPanel extends JFrame {
     }
 
 
+<<<<<<< HEAD
     public void show1(Account account) {
 
         if (account.isAccountType() == true) {
             CreditAccount creditAccount = new CreditAccount();
             creditAccount = (CreditAccount) account;
+=======
+    public void show1(Account account){
+
+        if(account.isAccountType()== true){
+            CreditAccount creditAccount=new CreditAccount();
+            creditAccount= (CreditAccount) account;
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
 
             userid.setText(String.valueOf(account.getId()));
             username.setText(creditAccount.getName());
             balance.setText(String.valueOf(account.getBalance()));
             over.setText(String.valueOf(creditAccount.getCeiling()));
             loanmoney.setText(String.valueOf(account.getLoanMoney()));
+<<<<<<< HEAD
         } else {
+=======
+        }else{
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
             userid.setText(String.valueOf(account.getId()));
             username.setText(account.getName());
             balance.setText(String.valueOf(account.getBalance()));
@@ -209,4 +252,9 @@ public class BusinessPanel extends JFrame {
     }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
 }

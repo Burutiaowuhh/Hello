@@ -19,9 +19,15 @@ public class CreditAccount extends Account {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return super.toString() + "   model.CreditAccount{" +
                 "ceiling=" + ceiling +
                 '}';
+=======
+       return super.toString()+"   model.CreditAccount{" +
+               "ceiling=" + ceiling +
+               '}';
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
 //        return "model.CreditAccount{}";
     }
 
@@ -38,7 +44,11 @@ public class CreditAccount extends Account {
 
     @Override
     public void withdraw(double m) {
+<<<<<<< HEAD
         setBalance(getBalance() - m);
+=======
+        setBalance(getBalance()-m);
+>>>>>>> 1d839758c064bd0339102d3081928eceb4779d1c
     }
 
 //    @Override
